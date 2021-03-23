@@ -14,7 +14,8 @@ connectDB();
 //cors
 
 const corsOptions = {
-    origin: process.env.ALLOWED_CLIENTS.split(',')
+    origin: 'http://localhost:3000'
+  //  process.env.ALLOWED_CLIENTS.split(',')
 }
 app.use(cors(corsOptions))
 
