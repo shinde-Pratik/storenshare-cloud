@@ -1,7 +1,6 @@
 :root {
-    --main-bg-color: #edf5fe;
-    --light-blue: #03a9f4;
-    --dark-blue: #028bca;
+    --main-bg-color: #e6f9fc;
+    --orange: #ee8a06;
   }
 
   body {
@@ -42,7 +41,7 @@ section.download {
     font-size: 18px;
     padding: 8px 40px;
     margin-top: 15px;
-    background: var(--light-blue);
+    background: var(--orange);
     text-decoration: none;
     border: none;
     border-radius: 5px;
@@ -51,6 +50,6 @@ section.download {
     transition: all .3s ease-in-out;
   }
 
-  .send-btn-container a:hover {
+  /*.send-btn-container a:hover {
       background: var(--dark-blue);
-  }
+  }*/
