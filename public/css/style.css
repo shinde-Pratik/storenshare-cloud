@@ -12,7 +12,6 @@
     align-items: center;
     justify-content: center;
     color: #333;
-    flex-direction:column;
   }
 
   .logo {
@@ -22,10 +21,6 @@
     width: 150px;
   }
   
-  .logo-img{
-    height: 100px;
-    width:100px;
-  }
 
 section.download {
     background: #fff;
