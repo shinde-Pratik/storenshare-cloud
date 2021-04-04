@@ -4,6 +4,7 @@
   }
 
   body {
+    display: flex;
     font-family: system-ui;
     background: var(--main-bg-color);
     height: 98vh;
@@ -12,6 +13,7 @@
     align-items: center;
     justify-content: center;
     color: #333;
+    flex-direction: row;
   }
 
   .logo {
@@ -23,6 +25,7 @@
   
   .logo-img{
     height: 100px;
+    width:100px;
   }
 
 section.download {
