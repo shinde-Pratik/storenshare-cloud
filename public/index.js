@@ -153,7 +153,7 @@ emailForm.addEventListener("submit", (e)=>{
 let toastTimer;
 const showToast = (msg) =>{
     toast.innerText = msg;
-    toast.style.transform = "translate(-50%,170px)";
+    toast.style.transform = "translate(-50%,100px)";
     clearTimeout(toastTimer);
     toastTimer = setTimeout(() =>{
         toast.style.transform = "translate(-50%,60px)";
