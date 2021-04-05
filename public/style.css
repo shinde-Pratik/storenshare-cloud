@@ -1,0 +1,338 @@
+:root{
+    --main-bg-color: #a5d7ee;
+    --border-color: #ff6b09f1;
+    --container-width: 500px;
+    --image-width: 100%;
+    --image-height: 675px;
+    --logo-height: 120px;
+    --font-size: 20px;
+    
+}
+body, html{
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    padding: 0;
+    margin: 0;
+    background-size: 100% 100%;
+    background-color: #ffffffcb;
+    /*overflow: hidden;*/
+    
+}
+
+.nav-bar{
+    width: 100%;
+    overflow: hidden;
+    position: fixed;
+    margin:0 auto;
+    background-color: rgba(255,255,255,0.0);
+
+}
+
+
+.nav-bar a{
+    float: right;
+    padding: 15px;
+    color: #fcb956;
+    text-decoration: none;
+    font-size: var(--font-size);
+}
+
+.nav-bar a:hover{
+   color: #ff7300;
+}
+
+.logo-img{
+    height: var(--logo-height);
+    padding-left: 23px;
+    position: fixed;
+}
+
+.home-text{
+  text-align: center;
+  position: absolute;
+  top: 80%;
+  left: 50%;
+  font-size: var(--font-size);
+  transform: translate(-50%, -50%);
+  color: white;
+}
+
+.home-button{
+    border: 1;
+    background-color: transparent;
+    color: white;
+    padding: 5px 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: var(--font-size);
+    margin: 4px 2px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+}
+
+.home-button:hover{
+    padding-right: 25px;
+    color: #ff7300;
+}
+
+#home{
+  background-image: url("./background.jpg");
+  background-color: #726f6f;
+  height: var(--image-height);
+  width: var(--image-width);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  position: relative;
+}
+    
+
+body, 
+.drop-zone, .upload-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    
+}
+
+.upload-container{
+    background: #ffffff;
+    margin-top: 50px;
+    border-radius: 25px;
+    box-shadow: 0px 20px 20px #0000002e;
+}
+
+.drop-zone{
+    width: var(--container-width);
+    background: #ffffff;
+    min-height: 200px;
+    border: 2px dashed var(--border-color);
+    margin: 30px;
+    border-radius: 10px;
+    transition: all .2s ease;
+}
+
+.dragged.drop-zone{
+    background: var(--main-bg-color);
+    border-color: #7d8188;
+}
+
+.icon-container{
+    width: 75px;
+    height: 100px;
+    position: relative;
+}
+
+.icon-container img{
+    width: 75px;
+    position: absolute;
+    transform-origin: bottom;
+    transition: transform 250ms ease-in-out;
+}
+
+.icon-container .center{
+    z-index: 1;
+}
+
+.icon-container .right, .icon-container .left{
+    filter: grayscale(.5);
+    transform: scale(.9);
+}
+
+.dragged .icon-container .left{
+    transform: rotate(-10deg) translateX(-20px) scale(0.9);
+    transform-origin: bottom;
+}
+
+.dragged .icon-container .right{
+    transform: rotate(10deg) translateX(20px) scale(0.9);
+    transform-origin: bottom;
+}
+
+.dragged .icon-container .center{
+    transform: translateY(-5px);
+}
+
+#fileInput{
+    display: none;
+}
+
+.browsebtn{
+    color: #1322f5fd;
+    cursor: pointer;
+}
+
+.progress-container
+{
+    width: var(--container-width);
+    height: 70px;
+    border: 2px solid var(--main-bg-color);
+    margin-bottom: 25px;
+    border-radius: 10px;
+    position: relative;
+    display: none;
+}
+
+.progress-container .bg-progress{
+    background: var(--main-bg-color);
+    width: 0%;
+    height: 100%;
+    border-radius: 3px;
+    transform-origin: left;
+    transition: width .25s linear;
+    position: absolute;
+}
+
+.progress-container .inner-container{
+    position: absolute;
+    z-index: 1;
+    margin: 10px 15px;
+    width: calc(100% - 30px);
+}
+
+.percent-container{
+    font-size: 12px;
+    margin: 5px;
+    opacity: .8;
+}
+
+.progress-bar{
+    height: 3px;
+    width: 100%;
+    background: #3c88ec ;
+    border-radius: 2px;
+    transform-origin: left;
+    transform: scaleX(0);
+    transition: transform .25s linear;
+}
+
+.sharing-container{
+    width: var(--container-width);
+    margin-bottom: 20px;
+     display: none;
+}
+
+p{
+    opacity: .7;
+    text-align: center;
+}
+
+.sharing-container .input-container {
+    position: relative;
+}
+
+.sharing-container .input-container input{
+    width: 100%;
+    border: 2px dashed var(--border-color);
+    border-radius: 3px;
+    padding: 10px 15px;
+    box-sizing: border-box;
+    font-size: 19px;
+    background: #ffffff ; 
+    color: #000000;
+}
+
+.input-container img{
+    position: absolute;
+    height: 22px;
+    width: 30px;
+    right: 7px;
+    top: 12px;
+    background: #a5d5f59c;
+    cursor: pointer;
+}   
+
+.email-container{
+    display: flex;
+    align-items: center;
+}
+
+.email-container form{
+    width: 100%;
+    border: 2px solid var(--border-color);
+    border-radius: 10px;
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.email-container .field{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 5px;
+    width: 400px;
+}
+
+.email-container label{
+    font-size: 17px;
+}
+
+.email-container input{
+    font-size: 16px;
+    border:none;
+    border-bottom: 2px solid var(--border-color);
+    text-align: center;
+}
+
+.email-container input:focus{
+    outline: none;
+}
+
+.email-container button{
+    font-size: 18px;
+    padding: 8px 40px;
+    margin-top: 15px;
+    color: white;
+    background: #ff7300;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.toast{
+    position: absolute;
+    bottom: 0px;
+    left: 50%;
+    transform: translate(-50%,80px);
+    padding: 10px 20px;
+    border-radius: 5px;
+    background: #ff7300;
+    color: #ffffff;
+    font-size: 18px;
+    transition: transform ease-in-out 0.2s;
+    box-shadow: 0px 25px 50px -12px rgba(0,0,0,0.25);
+}
+
+.shareFile-bg{
+    background: url("./undraw_uploading_go67.svg") no-repeat center;
+    background-size: contain;
+    height: 50vh;
+    width: 50vw;
+    transform: translateX(40%);
+}
+
+footer{
+    width: 100%;
+    background-color: #e2ddd8;
+}
+
+
+@media screen and (max-width: 480px){
+    :root{
+        --container-width:300px;
+        --image-width: 350px;
+        --image-height: 300px;
+        --logo-height: 50px;
+        --font-size:15px;
+    }
+    .shareFile-bg{
+        display: none;
+    }
+
+    .email-container .field{
+        flex-direction: column;
+        width: 300px;
+    }
+}

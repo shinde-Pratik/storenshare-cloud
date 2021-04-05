@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>storeNshare-File Sharing</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <div class="home" id="home">
+        <div class="nav-bar">
+            <a href="./help.html">Help</a> 
+            <a href="#uploadfile">Share File</a>
+            <a href="#home">Home</a>
+        </div>  
+        <img src="./logo.png" class="logo-img">
+        <div class="home-text">
+            <h2>Easy Way To Share files..</h2>
+           
+            <a href="#uploadfile" ><button class="home-button ">Upload File</button></a>
+        </div>
+    </div><br><br>
+    
+    <div class="shareFile">
+    <section class="upload-container" id="uploadfile">
+        <div class="drop-zone">
+            <div class="icon-container">
+                <img src="./file.svg" alt="File Icon" class="center" draggable="false">
+                <img src="./file.svg" alt="File Icon" class="left" draggable="false">
+                <img src="./file.svg" alt="File Icon" class="right" draggable="false">
+            </div>
+            <input type="file" id="fileInput">
+            <div class="title">Drop Your File Here or, <span class="browsebtn">browse</span></div>
+        </div>
+        <div class="progress-container">
+            <div class="bg-progress"></div>
+            <div class="inner-container">
+                <div class="title">Uploading...</div>
+                <div class="percent-container"><span id="percent">0</span>%</div>
+                <div class="progress-bar"></div>
+            </div>   
+        </div>
+        <div class="sharing-container">
+            <p class="expire">Link Expires in 24 hrs</p>
+            <div class="input-container">
+                <input type="text" id="fileURL" readonly >
+                <img src="./copy-icon.svg" alt="./copy-icon" id="copyBtn">
+            </div>
+            <p>Or Send via E-mail</p>
+            <div class="email-container">
+                <form id="email-form">
+                    <div class="field">
+                        <label for="sender">Your E-mail</label>
+                        <input type="email" required name="from-email" id="sender">
+                    </div>
+                    <div class="field">
+                        <label for="receiver">Receiver's E-mail</label>
+                        <input type="email" required name="to-email" id="receiver">
+                    </div>
+                    <button disabled="true" type="submit">Send</button>
+                </form>
+            </div>
+        </div>
+    </section>
+    <div class="shareFile-bg"></div>
+</div>
+<footer>
+    <p>Pratik Shinde</p>
+</footer>
+    <!--backgroud set-->
+    <div class="toast"></div>
+    <script src="index.js"></script>
