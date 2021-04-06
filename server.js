@@ -14,8 +14,8 @@ connectDB();
 //cors
 
 const corsOptions = {
-    //origin: "http://localhost:3000"
-    origin: "http://storensharecloud.herokuapp.com/"
+    origin: "http://localhost:3000"
+   // origin: "http://storensharecloud.herokuapp.com/"
   //  process.env.ALLOWED_CLIENTS.split(',')
 }
 app.use(cors(corsOptions))
