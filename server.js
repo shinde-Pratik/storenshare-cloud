@@ -14,7 +14,7 @@ connectDB();
 //cors
 
 const corsOptions = {
-    origin: "https://storensharecloud.herokuapp.com/"
+    origin: "http://storensharecloud.herokuapp.com/#uploadfile"
   //  process.env.ALLOWED_CLIENTS.split(',')
 }
 app.use(cors(corsOptions))
